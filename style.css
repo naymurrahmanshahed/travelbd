@@ -5,11 +5,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgb(55, 139, 55);
+  background-color: #f6f6f6;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(211, 35, 35, 0.788);
+  background-color: #a7a7a7;
   height: 10%;
   border-radius: 2rem;
 }
@@ -36,6 +36,20 @@ body {
   overflow-x: hidden;
 }
 
+.btn--text {
+  display: inline-block;
+  background: none;
+  font-size: 1.7rem;
+  font-family: inherit;
+  font-weight: 500;
+  color: #fff;
+
+  padding-bottom: 2px;
+  border-bottom: 2px;
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
 /******************************************************** Nav bar *****************************************************/
 
 .nav {
@@ -116,4 +130,36 @@ body {
 
 .nav__toggle {
   display: none;
+}
+
+/* header */
+
+.header__bg-img {
+  height: 89vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./images/header-img.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 150rem;
+  color: #fff;
+  padding: 6rem;
+}
+.header__content button {
+  width: 12rem;
+  margin-top: 3rem;
+}
+.header__title {
+  font-size: 8rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.header__description {
+  font-size: 1.2rem;
+  max-width: 70rem;
 }
