@@ -74,6 +74,11 @@ body {
 button {
   font-family: inherit;
 }
+
+.section {
+  padding: 5rem 3rem;
+  transition: transform 1s, opacity 1s;
+}
 /******************************************************** Nav bar *****************************************************/
 
 .nav {
@@ -204,6 +209,7 @@ button {
 .section__description {
   font-style: oblique;
   font-size: 1.2rem;
+  text-transform: capitalize;
 }
 
 .section__header {
@@ -258,13 +264,15 @@ button {
 .packages__content {
   display: grid;
   grid-template-columns: repeat(4, 4fr);
-  padding: 6rem;
+  padding: 3.5rem;
+  gap: 2rem;
 }
 
 .package__card {
   width: 28rem;
   height: 25rem;
   transition: all 0.3s;
+  margin-bottom: 2rem;
 }
 
 .package__card:hover .package__card--img {
@@ -275,6 +283,7 @@ button {
   height: 15rem;
   overflow: hidden;
   transition: all 0.3s;
+  filter: brightness(0.5);
 }
 
 .package__card--img img {
@@ -288,5 +297,74 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: c;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* special offer */
+
+#section--2 {
+  padding: 2rem 5.5rem;
+  height: 100vh;
+  background-image: url("./images/special-offer-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.slider {
+  max-width: 200rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: center;
+}
+.offer__card {
+  width: 30rem;
+  height: 35rem;
+  background-color: #fff;
+}
+
+.offer__card img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.offer__content {
+  padding: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 53%;
+  z-index: 10;
+  background: rgb(68 68 68 / 70%);
+  font-family: inherit;
+  color: #cdcdcd;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 3%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 3%;
+  transform: translate(50%, -50%);
 }
